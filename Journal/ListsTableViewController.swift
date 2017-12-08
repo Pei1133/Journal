@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 import Firebase
 
 class ListsTableViewController: UITableViewController {
@@ -60,8 +61,13 @@ class ListsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)as! JournalTableViewCell
         let journal = journals[indexPath.row]
+        let photoImgURL = journal.photoURL
         
         cell.titleLabel.text = journal.title
+        Nuke.loadImage(
+            with: URL(string: photoImgURL)!,
+            into: cell.listImageView
+        )
         
         //        cell.authorButton.setTitle(article.author, for: .normal)
         //        cell.authorButton.addTarget(self, action: #selector(userArticles), for: .touchUpInside)

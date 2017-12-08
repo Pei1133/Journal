@@ -9,5 +9,6 @@ target 'Journal' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Nuke', '~> 5.0'
 
 end
