@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class AddJournalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -29,8 +30,8 @@ class AddJournalViewController: UIViewController, UIImagePickerControllerDelegat
         let journalRef = ref.child("journals").childByAutoId()
 
         guard let title = self.titleTextField.text,
-            let content = self.journalTextField.text,
-            let photoURL = self.imageView.image
+            let content = self.journalTextField.text
+//            let photoURL = self.imageView.image
             else{
                 print("Form is not valid")
                 return
@@ -40,7 +41,7 @@ class AddJournalViewController: UIViewController, UIImagePickerControllerDelegat
             "title": title,
             "content": content,
             "date": "\(Date())",
-            "photoURL": photoURL
+//            "photoURL": photoURL
             ] as [String : Any]
         
         journalRef.setValue(value)
@@ -92,18 +93,17 @@ class AddJournalViewController: UIViewController, UIImagePickerControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : Any])
     {
         var selectedImageFromPicker: UIImage?
-        if let selectedImage = info[UIImagePickerControllerOriginalImage] {
-            selectedImageFromPicker = selectedImage as? UIImage
-//            imageView.image = selectedImage
-//            imageView.contentMode = .scaleAspectFit
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            selectedImageFromPicker = selectedImage
+            imageView.image = selectedImage
+            imageView.contentMode = .scaleAspectFit
         }
         let uniqueString = NSUUID().uuidString
         if let selectedImage = selectedImageFromPicker {
             
-            let storageRef = storage.reference().child("Photos").child("\(uniqueString).png")
+            let storageRef = Storage.storage().reference().child("Photos").child("\(uniqueString).png")
             
             if let uploadData = UIImagePNGRepresentation(selectedImage) {
-                // 這行就是 FirebaseStorage 關鍵的存取方法。
                 storageRef.putData(uploadData, metadata: nil, completion: { (data, error) in
                     
                     if error != nil {
@@ -112,7 +112,6 @@ class AddJournalViewController: UIViewController, UIImagePickerControllerDelegat
                     }
                     
                     if let uploadImageUrl = data?.downloadURL()?.absoluteString {
-                        // 我們可以 print 出來看看這個連結事不是我們剛剛所上傳的照片。
                         print("Photo Url: \(uploadImageUrl)")
                     }
                 })
