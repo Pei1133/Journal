@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		7E16F54DA5CA9230BF1C49A2 /* Pods_Journal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A9206F24AC8160DEB9862F /* Pods_Journal.framework */; };
 		ABD19B851FDA2EFA0062C4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B841FDA2EFA0062C4CC /* AppDelegate.swift */; };
-		ABD19B871FDA2EFA0062C4CC /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B861FDA2EFA0062C4CC /* ListsViewController.swift */; };
 		ABD19B8A1FDA2EFA0062C4CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD19B881FDA2EFA0062C4CC /* Main.storyboard */; };
 		ABD19B8C1FDA2EFA0062C4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD19B8B1FDA2EFA0062C4CC /* Assets.xcassets */; };
 		ABD19B8F1FDA2EFA0062C4CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD19B8D1FDA2EFA0062C4CC /* LaunchScreen.storyboard */; };
 		ABD19B971FDA31C00062C4CC /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B961FDA31C00062C4CC /* Journal.swift */; };
 		ABD19B991FDA32630062C4CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABD19B981FDA32630062C4CC /* GoogleService-Info.plist */; };
 		ABD19B9C1FDA412E0062C4CC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B9B1FDA412E0062C4CC /* JournalTableViewCell.swift */; };
+		ABD19B9E1FDA48100062C4CC /* ListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B9D1FDA48100062C4CC /* ListsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,6 @@
 		A8A9206F24AC8160DEB9862F /* Pods_Journal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Journal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD19B811FDA2EFA0062C4CC /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD19B841FDA2EFA0062C4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ABD19B861FDA2EFA0062C4CC /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		ABD19B891FDA2EFA0062C4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABD19B8B1FDA2EFA0062C4CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABD19B8E1FDA2EFA0062C4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 		ABD19B961FDA31C00062C4CC /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		ABD19B981FDA32630062C4CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABD19B9B1FDA412E0062C4CC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
+		ABD19B9D1FDA48100062C4CC /* ListsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsTableViewController.swift; sourceTree = "<group>"; };
 		C93373168F329CEE042A7F6C /* Pods-Journal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Journal/Pods-Journal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,8 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				ABD19B841FDA2EFA0062C4CC /* AppDelegate.swift */,
-				ABD19B861FDA2EFA0062C4CC /* ListsViewController.swift */,
 				ABD19B961FDA31C00062C4CC /* Journal.swift */,
+				ABD19B9D1FDA48100062C4CC /* ListsTableViewController.swift */,
 				ABD19B9B1FDA412E0062C4CC /* JournalTableViewCell.swift */,
 				ABD19B881FDA2EFA0062C4CC /* Main.storyboard */,
 				ABD19B8B1FDA2EFA0062C4CC /* Assets.xcassets */,
@@ -246,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABD19B871FDA2EFA0062C4CC /* ListsViewController.swift in Sources */,
+				ABD19B9E1FDA48100062C4CC /* ListsTableViewController.swift in Sources */,
 				ABD19B851FDA2EFA0062C4CC /* AppDelegate.swift in Sources */,
 				ABD19B971FDA31C00062C4CC /* Journal.swift in Sources */,
 				ABD19B9C1FDA412E0062C4CC /* JournalTableViewCell.swift in Sources */,

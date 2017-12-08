@@ -12,7 +12,7 @@
         <!--My Journals-->
         <scene sceneID="acq-S0-3oX">
             <objects>
-                <tableViewController id="Or1-nn-NRS" customClass="ListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Journals" id="Or1-nn-NRS" customClass="ListsTableViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ThM-DU-cFm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="titleLabel" destination="5BM-6G-UcG" id="Rx6-RB-dJK"/>
+                                    <outlet property="titleLabel" destination="5BM-6G-UcG" id="tmm-pa-5OD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -57,9 +57,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="listsTableView" destination="ThM-DU-cFm" id="5gn-Fx-TYX"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEG-ta-eQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
