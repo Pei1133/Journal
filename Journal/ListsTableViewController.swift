@@ -20,18 +20,12 @@ class ListsTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 80.0
         tableView.rowHeight = UITableViewAutomaticDimension
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Database.database().reference().child("journals").observe(.value) { (snapshot) in
             self.journals.removeAll()
-            print(snapshot)
             for child in snapshot.children {
                 let childrenSnapshot = child as! DataSnapshot
                 let journal = Journal(snapshot: childrenSnapshot)
@@ -68,34 +62,54 @@ class ListsTableViewController: UITableViewController {
             with: URL(string: photoImgURL)!,
             into: cell.listImageView
         )
-        
-        //        cell.authorButton.setTitle(article.author, for: .normal)
-        //        cell.authorButton.addTarget(self, action: #selector(userArticles), for: .touchUpInside)
-        //        cell.likeButton.addTarget(self, action: #selector(likeArticle), for: .touchUpInside)
-
         return cell
     }
 
 
-    /*
+    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    //        if editingStyle == UITableViewCellEditingStyle.delete {
+    ////            self.allNames[indexPath.section]?.remove(at: indexPath.row)
+    //            tableView.setEditing(false, animated: true)
+    //        }
+    //
+    //        else if editingStyle == UITableViewCellEditingStyle.insert
+    //        {
+    ////            allNames[indexPath.section]?.insert("插入的", at: indexPath.row)
+    //            tableView.setEditing(false, animated: true)
+    //        }
+    //
+    //        tableView.reloadData()
+    //    }
+
+
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//            tableView.setEditing(false, animated: true)
+
+            let ref = Database.database().reference()
+            let key = ref.child("journals").key
+            let post = ["content": nil,
+                        "date": nil,
+                        "title": nil,
+                        "photoURL": nil] as [String : Any?]
+            let childUpdates = ["/journals/\(key)": post]
+            ref.updateChildValues(childUpdates)
+            tableView.reloadData()
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.

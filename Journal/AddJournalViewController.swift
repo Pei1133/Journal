@@ -92,35 +92,6 @@ class AddJournalViewController: UIViewController, UIImagePickerControllerDelegat
         dismiss(animated:true, completion: nil)
     }
     
-    //    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
-    //        return "確認刪除"
-    //    }
-    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-    //        if editingStyle == UITableViewCellEditingStyle.delete {
-    ////            self.allNames[indexPath.section]?.remove(at: indexPath.row)
-    //            tableView.setEditing(false, animated: true)
-    //        }
-    //
-    //        else if editingStyle == UITableViewCellEditingStyle.insert
-    //        {
-    ////            allNames[indexPath.section]?.insert("插入的", at: indexPath.row)
-    //            tableView.setEditing(false, animated: true)
-    //        }
-    //
-    //        tableView.reloadData()
-    //    }
-    
-    //    //    MARK: - UIImagePickerControllerDelegate
-    //    func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : Any])
-    //    {
-    //        if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-    //            imageView.image = chosenImage
-    //            imageView.contentMode = .scaleAspectFit
-    //        }
-    //        let uniqueString = NSUUID().uuidString
-    //        dismiss(animated:true, completion: nil)
-    //    }
-    
     /*
     // MARK: - Navigation
 
