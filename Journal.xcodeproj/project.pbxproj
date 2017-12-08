@@ -15,6 +15,7 @@
 		ABD19B8F1FDA2EFA0062C4CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD19B8D1FDA2EFA0062C4CC /* LaunchScreen.storyboard */; };
 		ABD19B971FDA31C00062C4CC /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B961FDA31C00062C4CC /* Journal.swift */; };
 		ABD19B991FDA32630062C4CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABD19B981FDA32630062C4CC /* GoogleService-Info.plist */; };
+		ABD19B9C1FDA412E0062C4CC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B9B1FDA412E0062C4CC /* JournalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		ABD19B901FDA2EFA0062C4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABD19B961FDA31C00062C4CC /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		ABD19B981FDA32630062C4CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABD19B9B1FDA412E0062C4CC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		C93373168F329CEE042A7F6C /* Pods-Journal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Journal/Pods-Journal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				ABD19B841FDA2EFA0062C4CC /* AppDelegate.swift */,
 				ABD19B861FDA2EFA0062C4CC /* ListsViewController.swift */,
 				ABD19B961FDA31C00062C4CC /* Journal.swift */,
+				ABD19B9B1FDA412E0062C4CC /* JournalTableViewCell.swift */,
 				ABD19B881FDA2EFA0062C4CC /* Main.storyboard */,
 				ABD19B8B1FDA2EFA0062C4CC /* Assets.xcassets */,
 				ABD19B8D1FDA2EFA0062C4CC /* LaunchScreen.storyboard */,
@@ -194,7 +197,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "";
 		};
 		EFF17F8387EB7B7D10CD1F6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -246,6 +249,7 @@
 				ABD19B871FDA2EFA0062C4CC /* ListsViewController.swift in Sources */,
 				ABD19B851FDA2EFA0062C4CC /* AppDelegate.swift in Sources */,
 				ABD19B971FDA31C00062C4CC /* Journal.swift in Sources */,
+				ABD19B9C1FDA412E0062C4CC /* JournalTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
