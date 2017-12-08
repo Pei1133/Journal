@@ -11,17 +11,17 @@ import Firebase
 
 class Journal {
     var title: String = ""
-    var text: String = ""
+    var content: String = ""
     var date: String = ""
-//    var imageURL: String = ""
+//    var photoURL: String = ""
     let ref: DatabaseReference!
 
     init(snapshot: DataSnapshot) {
         self.ref = snapshot.ref
         if let value = snapshot.value as? [String: Any] {
             self.title = value["title"] as! String
-            self.text = value["content"] as! String
-            self.date = value["publish date"] as! String
+            self.content = value["content"] as! String
+            self.date = value["date"] as! String
         }
     }
 }

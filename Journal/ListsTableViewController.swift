@@ -16,6 +16,8 @@ class ListsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 80.0
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,7 +30,7 @@ class ListsTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         Database.database().reference().child("journals").observe(.value) { (snapshot) in
             self.journals.removeAll()
-            
+            print(snapshot)
             for child in snapshot.children {
                 let childrenSnapshot = child as! DataSnapshot
                 let journal = Journal(snapshot: childrenSnapshot)
@@ -60,6 +62,7 @@ class ListsTableViewController: UITableViewController {
         let journal = journals[indexPath.row]
         
         cell.titleLabel.text = journal.title
+        
         //        cell.authorButton.setTitle(article.author, for: .normal)
         //        cell.authorButton.addTarget(self, action: #selector(userArticles), for: .touchUpInside)
         //        cell.likeButton.addTarget(self, action: #selector(likeArticle), for: .touchUpInside)

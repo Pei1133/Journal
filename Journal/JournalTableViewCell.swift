@@ -10,7 +10,7 @@ import UIKit
 
 class JournalTableViewCell: UITableViewCell {
 
-//    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var listImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
