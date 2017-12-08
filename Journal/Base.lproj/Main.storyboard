@@ -65,7 +65,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="My Journals" id="Ltg-3V-EEx">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="DHE-Ab-8rX">
+                        <barButtonItem key="rightBarButtonItem" image="icon_plus" id="DHE-Ab-8rX">
                             <connections>
                                 <segue destination="eCk-e1-jcf" kind="show" id="2Vm-2A-qa9"/>
                             </connections>
@@ -85,10 +85,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Eo-lj-BdS">
-                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xko-TX-a4N" userLabel="Title Text Field">
                                 <rect key="frame" x="22" y="447" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,6 +99,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6l-m2-2Mf" userLabel="PickUp Image Buttom">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="eCk-e1-jcf" eventType="touchUpInside" id="rFD-lp-KHa"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_photo" translatesAutoresizingMaskIntoConstraints="NO" id="Zdh-ZZ-8gO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t49-0t-5OA">
                                 <rect key="frame" x="164" y="626" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -117,14 +124,15 @@
                         <viewLayoutGuide key="safeArea" id="pg5-Wt-2rh"/>
                     </view>
                     <connections>
-                        <outlet property="addImageView" destination="2Eo-lj-BdS" id="C9Z-gV-ZpD"/>
+                        <outlet property="imageView" destination="Zdh-ZZ-8gO" id="wWM-iA-bh5"/>
                         <outlet property="journalTextField" destination="SFj-NR-fXY" id="wNK-zr-zsd"/>
+                        <outlet property="pickUpImageButtom" destination="A6l-m2-2Mf" id="as7-dz-tQI"/>
                         <outlet property="titleTextField" destination="Xko-TX-a4N" id="0m1-Gu-nw5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9U9-Ct-OSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="128"/>
+            <point key="canvasLocation" x="213.59999999999999" y="127.28635682158921"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hhs-17-YFA">
@@ -143,4 +151,8 @@
             <point key="canvasLocation" x="-1380" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_photo" width="44" height="44"/>
+        <image name="icon_plus" width="44" height="44"/>
+    </resources>
 </document>

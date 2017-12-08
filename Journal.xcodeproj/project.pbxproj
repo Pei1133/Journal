@@ -17,6 +17,7 @@
 		ABD19B9C1FDA412E0062C4CC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B9B1FDA412E0062C4CC /* JournalTableViewCell.swift */; };
 		ABD19B9E1FDA48100062C4CC /* ListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B9D1FDA48100062C4CC /* ListsTableViewController.swift */; };
 		ABD19BA01FDA4B200062C4CC /* AddJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19B9F1FDA4B200062C4CC /* AddJournalViewController.swift */; };
+		ABD19BA21FDA642B0062C4CC /* EditJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD19BA11FDA642B0062C4CC /* EditJournalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		ABD19B9B1FDA412E0062C4CC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		ABD19B9D1FDA48100062C4CC /* ListsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsTableViewController.swift; sourceTree = "<group>"; };
 		ABD19B9F1FDA4B200062C4CC /* AddJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJournalViewController.swift; sourceTree = "<group>"; };
+		ABD19BA11FDA642B0062C4CC /* EditJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJournalViewController.swift; sourceTree = "<group>"; };
 		C93373168F329CEE042A7F6C /* Pods-Journal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Journal/Pods-Journal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				ABD19B9D1FDA48100062C4CC /* ListsTableViewController.swift */,
 				ABD19B9B1FDA412E0062C4CC /* JournalTableViewCell.swift */,
 				ABD19B9F1FDA4B200062C4CC /* AddJournalViewController.swift */,
+				ABD19BA11FDA642B0062C4CC /* EditJournalViewController.swift */,
 				ABD19B881FDA2EFA0062C4CC /* Main.storyboard */,
 				ABD19B8B1FDA2EFA0062C4CC /* Assets.xcassets */,
 				ABD19B961FDA31C00062C4CC /* Journal.swift */,
@@ -253,6 +256,7 @@
 				ABD19B851FDA2EFA0062C4CC /* AppDelegate.swift in Sources */,
 				ABD19B971FDA31C00062C4CC /* Journal.swift in Sources */,
 				ABD19B9C1FDA412E0062C4CC /* JournalTableViewCell.swift in Sources */,
+				ABD19BA21FDA642B0062C4CC /* EditJournalViewController.swift in Sources */,
 				ABD19BA01FDA4B200062C4CC /* AddJournalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -378,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
