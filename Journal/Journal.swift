@@ -13,7 +13,7 @@ class Journal {
     var title: String = ""
     var content: String = ""
     var date: String = ""
-//    var photoURL: String = ""
+    var photoURL: String = ""
     let ref: DatabaseReference!
 
     init(snapshot: DataSnapshot) {
